@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-=======
     "codemirror": "^5.37.0",
->>>>>>> 33c7f30f24a16d3f0847e6cb7815896b73ce0a88
     "cors": "^2.8.4",
     "list-react-files": "^0.2.0",
     "quickly-copy-file": "^1.0.0",
