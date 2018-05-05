@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/output', function (req, res) {
     // res.json({ querystring_breed: req.query.file });
     console.log(req.query.file);
-    fs.readFile('file/' + req.query.file, function (err, data) {
+    fs.readFile('sourceCampathonApp/' + req.query.file, function (err, data) {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.write(data);
         res.end();
