@@ -14,22 +14,33 @@ class LearnPage extends React.Component {
         code: 'Loading...',
         codeContent: ''
     }
-    componentDidMount() {
+    fech = () => {
         const self = this;
-        const id=self.props.match.params.id;
+        const id = self.props.match.params.id;
         console.log(id);
-        fetch('http://localhost:8080/output?file='+id+'/code.js&read=false')
+        fetch('http://localhost:8080/output?file=' + id + '/code.js&read=false')
             .then(function (response) {
                 response.text().then(function (text) {
                     self.state.code = text;
-                    self.setState(self.state);
+                    self.setState({
+                        code: self.state.code
+                    });
                 });
-            })
+            });
+            document.getElementsByClassName('nav')[0].style.left = '-1000px';
+    }
+    componentDidMount() {
+        this.fech();
+    }
+    componentDidUpdate(prevProps) {
+        if (this.props.location !== prevProps.location) {
+            this.fech();
+        }
     }
     download = () => {
         var text = this.state.codeContent,
-        blob = new Blob([text], { type: 'text/plain' }),
-        anchor = document.createElement('a');
+            blob = new Blob([text], { type: 'text/plain' }),
+            anchor = document.createElement('a');
         anchor.download = "download.js";
         anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
         anchor.dataset.downloadurl = ['text/plain', anchor.download, anchor.href].join(':');
@@ -54,8 +65,8 @@ class LearnPage extends React.Component {
     render() {
         return (
             <div>
-                <Header/>
-                <NavBar data={this.props.data}/>
+                <Header />
+                <NavBar data={this.props.data} />
                 <div id="toolkit">
                     <button onClick={this.download}>Lưu file</button>
                     <button onClick={this.download}>Tải lại</button>
