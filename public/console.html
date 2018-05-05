@@ -17,6 +17,7 @@
   }
   document.getElementsByClassName("cmd")[0].addEventListener("submit", function (e) {
     e.preventDefault();
+    consoleLog(document.querySelector("#input").value);
     try {
       eval(document.querySelector("#input").value);
     } catch (err) {
