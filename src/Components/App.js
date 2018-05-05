@@ -6,6 +6,7 @@ import LearnPage from "./LearnPage/LearnPage";
 import Header from "./Header";
 import DocPage from "./DocPage/DocPage";
 import NavBar from "./Navbar";
+import Test from "./Test/Test";
 
 
 class App extends Component {
