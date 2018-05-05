@@ -6,7 +6,6 @@ import LearnPage from "./LearnPage/LearnPage";
 import Header from "./Header";
 import DocPage from "./DocPage/DocPage";
 import NavBar from "./Navbar";
-import listReactFiles from 'list-react-files'
 
 
 class App extends Component {
