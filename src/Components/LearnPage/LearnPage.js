@@ -1,6 +1,7 @@
 import React from "react";
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 import '../../Style/Learn.css';
+import Header from "./../Header";
 require('codemirror/lib/codemirror.css');
 require('codemirror/mode/javascript/javascript');
 require('codemirror/theme/material.css');
@@ -50,6 +51,7 @@ class LearnPage extends React.Component {
     render() {
         return (
             <div>
+                <Header/>
                 <div id="toolkit">
                     <button onClick={this.download}>Lưu file</button>
                     <button onClick={this.run}>Chạy ngay »</button>

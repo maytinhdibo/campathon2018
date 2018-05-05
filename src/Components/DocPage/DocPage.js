@@ -2,6 +2,7 @@ import LearnPage from "../LearnPage/LearnPage";
 import Route from "react-router-dom/es/Route";
 import React from "react";
 import {Link} from "react-router-dom";
+import Header from "./../Header";
 
 class DocPage extends React.Component {
     render(){
@@ -12,16 +13,18 @@ class DocPage extends React.Component {
             return (
                 <div className = 'topic'>
                     {name}
-                    <div className = 'learn-doc'>Tài liệu:
-                        <br/>
-                        <Link to={'doc/learn/'}>Code</Link>
-                    </div>
+                    <Link to={'doc/learn/'}>Tài liệu</Link>
+                        <Link to={'doc/learn/'}>Luyện tập</Link>
                 </div>
             );
         });
         return(
-            <div >
+            <div>
+                <Header/>
+            <div className="nav">
+            <div className="back">&lsaquo;</div>
                 {listTopic}
+            </div>
             </div>
         )
     }

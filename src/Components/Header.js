@@ -3,7 +3,10 @@ import React from "react";
 class Header extends React.Component {
     render(){
         return(
-            <div className={'header'}></div>
+            <div className={'headerTop'}>
+            <img className="menu" src="/img/menu.png"/>
+            <span>ReactJS Live Training</span>
+            </div>
         )
     }
 }

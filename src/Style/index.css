@@ -107,3 +107,40 @@ button {
   margin-right: 20px;
   transition: 0.5s;
 }
+
+.nav{
+  background:#eee;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  width:300px;
+  overflow:auto;
+}
+.topic{
+  padding:6px;
+}
+.nav a{
+  margin:4px;
+  display: block;
+  background:#fff;
+  padding:9px;
+  text-decoration: none;
+  color:#345;
+  transition: 0.5s;
+}
+.nav a:hover{
+  background:#3eb8ae;
+  color:#eee;
+}
+.nav .back{
+  font-size:24px;
+  padding:0 10px;
+  background:#fcfcfc;
+
+}
+.nav .back:hover{
+  background:#3eb8ae;
+  color:#eee;
+  cursor: pointer;
+}
