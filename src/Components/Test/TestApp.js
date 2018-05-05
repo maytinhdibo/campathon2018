@@ -4,7 +4,7 @@ import {Switch, Route} from "react-router-dom";
 class Test  extends React.Component {
     render(){
         return(
-         <h2>Hello world</h2>
+         <h2>Helloh whorld</h2>
         )
     }
 }

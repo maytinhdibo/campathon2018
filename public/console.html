@@ -17,7 +17,6 @@
   }
   document.getElementsByClassName("cmd")[0].addEventListener("submit", function (e) {
     e.preventDefault();
-    consoleLog(document.querySelector("#input").value);
     try {
       eval(document.querySelector("#input").value);
     } catch (err) {
@@ -30,7 +29,7 @@
     var oldLog = console.log;
     console.log = function (message) {
         // DO MESSAGE HERE.
-        consoleLog(message);
+        consoleLog(messageJSON.stringify(a));
         oldLog.apply(console, arguments);
     };
 })();

@@ -9,7 +9,8 @@ class LearnPage extends React.Component {
     state = {
         console: ["Terminal was starting...."],
         input: "",
-        code: 'Loading...'
+        code: 'Loading...',
+        codeContent: ''
     }
     componentDidMount() {
         const self = this;
@@ -22,7 +23,6 @@ class LearnPage extends React.Component {
             })
     }
     run=()=>{
-        alert(this.state.code);
         const request = new Request("http://localhost:8080/input", {
 			method: "POST",
 			headers: {
@@ -30,7 +30,7 @@ class LearnPage extends React.Component {
 			},
 			body: JSON.stringify({
 				file: "Components/Test/TestApp.js",
-				text: this.state.code
+				text: this.state.codeContent
 			})
 		});
 		return fetch(request)
@@ -51,13 +51,15 @@ class LearnPage extends React.Component {
                             mode: 'javascript',
                             lineNumbers: true,
                             theme: 'material'
-                        }} />
+                        }} onChange={(editor, data, value) => {
+                            this.setState({codeContent: value});
+                          }}/>
                     </div>
 
                     <div id="frame">
-                        <iframe src="/test" />
+                        <iframe src="http://localhost:3001/" />
                     </div>
-                    <iframe src="/console.html">
+                    <iframe id="console" src="/console.html">
                     </iframe>
 
                 </div>
