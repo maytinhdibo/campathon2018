@@ -21,16 +21,11 @@ class App extends Component {
 
     return (
         <div id={'app'}>
-            <NavBar/>
-            {/* <Header/> */}
             <Switch>
                 <Route exact path={"/"} component={StartPage}/>
                 <Route exact path={'/doc'} component={DocPage}/>
                 <Route exact path={'/doc/learn/'} component={LearnPage}/>
             </Switch>
-            <footer>
-                Copyright 2018, UET CodeCamp
-            </footer>
         </div>
           );
   }
