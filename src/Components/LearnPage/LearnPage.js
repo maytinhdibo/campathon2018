@@ -1,5 +1,5 @@
 import React from "react";
-import {UnControlled as CodeMirror} from 'react-codemirror2'
+import { UnControlled as CodeMirror } from 'react-codemirror2'
 import '../../Style/Learn.css';
 require('codemirror/lib/codemirror.css');
 require('codemirror/mode/javascript/javascript');
@@ -22,28 +22,38 @@ class LearnPage extends React.Component {
                 });
             })
     }
-    run=()=>{
+    download = () => {
+        var text = this.state.codeContent,
+        blob = new Blob([text], { type: 'text/plain' }),
+        anchor = document.createElement('a');
+        anchor.download = "download.js";
+        anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
+        anchor.dataset.downloadurl = ['text/plain', anchor.download, anchor.href].join(':');
+        anchor.click();
+    }
+    run = () => {
         const request = new Request("http://localhost:8080/input", {
-			method: "POST",
-			headers: {
-				'Content-Type': ' application/json'
-			},
-			body: JSON.stringify({
-				file: "Components/Test/TestApp.js",
-				text: this.state.codeContent
-			})
-		});
-		return fetch(request)
-			.then(response => {
-				console.log(response);
-			});
+            method: "POST",
+            headers: {
+                'Content-Type': ' application/json'
+            },
+            body: JSON.stringify({
+                file: "Components/Test/TestApp.js",
+                text: this.state.codeContent
+            })
+        });
+        return fetch(request)
+            .then(response => {
+                console.log(response);
+            });
     }
     render() {
         return (
             <div>
                 <div id="toolkit">
-                    <button>Lưu file</button>
+                    <button onClick={this.download}>Lưu file</button>
                     <button onClick={this.run}>Chạy ngay »</button>
+                    <button id="nextButton">Bài tiếp</button>
                 </div>
                 <div className="main-learn">
                     <div id="code">
@@ -52,8 +62,8 @@ class LearnPage extends React.Component {
                             lineNumbers: true,
                             theme: 'material'
                         }} onChange={(editor, data, value) => {
-                            this.setState({codeContent: value});
-                          }}/>
+                            this.setState({ codeContent: value });
+                        }} />
                     </div>
 
                     <div id="frame">

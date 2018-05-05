@@ -13,7 +13,11 @@
     document.querySelector("#input").click();
   });
   function consoleLog(text) {
-    document.getElementById("console-content").innerHTML += "<p>" + text;
+    if((typeof text)=="string"){
+      if(text.indexOf("setImmed")==0) return 0;
+      document.getElementById("console-content").innerHTML += "<p>" + text;
+    }else 
+    document.getElementById("console-content").innerHTML += "<p>" + JSON.stringify(text);
   }
   document.getElementsByClassName("cmd")[0].addEventListener("submit", function (e) {
     e.preventDefault();
