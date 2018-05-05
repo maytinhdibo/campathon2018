@@ -21,6 +21,9 @@
 .App-intro {
   font-size: large;
 }
+body{
+  overflow-y: auto;
+}
 footer{
   position: fixed;
   bottom:0;

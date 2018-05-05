@@ -30,7 +30,7 @@ class LearnPage extends React.Component {
                     </div>
 
                     <div id="frame">
-                        <iframe src="http://www.december.com/html/tutor/hello.html" />
+                        <iframe src="/test" />
                     </div>
 <iframe src="/console.html">
     </iframe>
