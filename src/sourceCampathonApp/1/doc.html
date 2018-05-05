@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Bắt đầu với ReactJS</h1>
+	<img src="https://viblo.asia/uploads/1bf9860f-8391-40c8-88a2-44a60ac2f3cb.jpg" alt="logo">
+	<h1>Giới thiệu:</h1>
+	<p>Có rất nhiều bài viết, tài liệu đã đề cập đến nên mình chỉ nhắc lại một số nét mà mình thấy là cơ bản nhất của <code>React</code>.</p>
+	<br>
+	<p>Với một ứng dụng <code>React</code> thì mọi thứ đều được cấu tạo bởi các <code>component</code>. Đây cũng là phần khá hay ho, mình sẽ tìm hiểu và trình bày 		cụ thể hơn sau.
+		=> Việc sử dụng "DOM ảo" thì nhanh và hiệu quả hơn nhiều so với việc dùng "DOM thật". Cái này mình sẽ tìm hiểu và đề cập vào những bài viết sau nhé 😄.
+
+		<code>React</code> không phải là một <code>framework</code> hoàn chình mà đơn thuần phục vụ cho tầng chỉ phục View (trong mô hình MVC).
+		Luồng dữ liệu trong <code>React</code> là luồng giữ liệu một chiều từ cha xuống con.
+		Có 2 tham số cơ bản nhất được dùng để truyền tải dữ liệu trong <code>React</code> là <code>props</code> và <code>state</code>, khác biệt ở 2 tham số này là :</p>
+	<p>
+			<code>props</code> là tham số mà bản thân mỗi <code>component</code> không thể tự sinh ra mà sẽ được truyền vào từ các <code>component</code> cha, và nó cũng không thay đổi được trong quá trình truyền tải.
+		<code>state</code> lại là tham số được sinh ra trong nội tại của từng <code>component</code> và có thể thay đổi được trong quá trình truyền tải.
+	</p>
+	<br>
+	<p>
+		Tuy nhiên, nếu được sử dụng để truyền tải xuống các component con bên dưới thì props với state không có sự khác biệt.
+	</p>
+	<h1>
+		Cấu trúc của một ứng dụng React.
+	</h1>
+	<img src="https://viblo.asia/uploads/c6019780-b149-404d-8efe-8a13eb92da20.png" alt="cautruc">
+	<p>Một ứng dụng React đơn giản có cấu trúc rất đơn giản như hình bên trên, trong đó có :</p>
+	<<ul>
+		<li>Một ứng dụng React đơn giản có cấu trúc rất đơn giản như hình bên trên, trong đó có :</li>
+		<li>File index.html - file html đơn giản để load JavaScript và cung cấp một vài thẻ div.</li>
+		<li>File package.json - là một file npm tiêu chuẩn, nó chứa tất cả thông tin về dự án như: name, description, author...</li>
+		<li>Một file công cụ đóng gói hoặc xây dựng module (thường là webpack.config.js).</li>
+	</ul>
+	
+	<h2>Cài đặt.</h2>
+	<br>
+	<p>
+		Sau đây mình xin trình bày 2 cách đơn giản nhất để tạo ra một ứng dụng React có tên là your-app-name.
+	</p>
+	<br>
+	
+	<h3>1. Cài đặt tự động với npm.</h3>
+	<br>
+	<p>Cách tốt nhất là bạn nên sử dụng create-react-app để cài đặt. Nó đã bao gồm việc cài đặt một số thư viện cần thiết như webpack, babel, .... Công việc của bạn rất đơn giản là mở terminal lên và chạy một số dòng lệnh sau :</p>
+	<br>
+	<code>npm <span>install</span> -g <span>create</span>-react-app
+		<span>create</span>-react-app your-app-<span>name</span>
+		cd your-app-<span>name</span>
+		npm <span>start</span>
+	</code>
+	<p>Sau khi hoàn tất thì bạn hãy vào <code>localhost:3000</code> để xem kết quả nhé.</p>
+	<h3>2. Cài đặt thủ công.</h3>
+	<p>Việc cài đặt thủ công thì phức tạp hơn một chút, vì bạn sẽ phải chỉ định những thư viện nào là cần thiết cài đặt cho ứng dụng của mình. Tuy nhiên nó cũng không quá phức tạp với những người mới bắt đầu như mình đâu. Chúng ta làm như sau :</p>
+	<ul>
+		<li>Tạo thư mục dự án :</li>
+		<code>mkdir your-app-<span >name</span>
+		cd your-app-<span >name</span>
+</code>
+	</ul>
+	
+</body>
+</html>

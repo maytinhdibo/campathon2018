@@ -4,6 +4,9 @@ import {Switch, Route} from "react-router-dom";
 import StartPage from "./StartPage/StartPage";
 import LearnPage from "./LearnPage/LearnPage";
 import Header from "./Header";
+import DocPage from "./DocPage/DocPage";
+import NavBar from "./Navbar";
+import listReactFiles from 'list-react-files'
 
 
 class App extends Component {
@@ -16,16 +19,19 @@ class App extends Component {
     }
 
   render() {
+
     return (
         <div id={'app'}>
+            <NavBar/>
             {/* <Header/> */}
             <Switch>
                 <Route exact path={"/"} component={StartPage}/>
-                <Route exact path={'/learn/:id'} component={LearnPage}/>
+                <Route exact path={'/doc'} component={DocPage}/>
+                <Route exact path={'/doc/learn/'} component={LearnPage}/>
             </Switch>
             <footer>
                 Copyright 2018, UET CodeCamp
-                </footer>
+            </footer>
         </div>
           );
   }

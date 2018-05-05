@@ -4207,6 +4207,12 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+list-react-files@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/list-react-files/-/list-react-files-0.2.0.tgz#5d5102d42270328e085dfee6b90338bbc4cbe234"
+  dependencies:
+    glob "^7.1.2"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -5778,6 +5784,10 @@ readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.6, readable
     safe-buffer "~5.1.1"
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
+
+readdir-recursive@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/readdir-recursive/-/readdir-recursive-0.0.4.tgz#9af435aba9c58bd80dbdc9488b4db9ba9f12301f"
 
 readdirp@^2.0.0:
   version "2.1.0"
