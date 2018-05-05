@@ -7,6 +7,14 @@ import Header from "./Header";
 
 
 class App extends Component {
+
+    state = {
+        id : '1',
+        fileName: 'code',
+        docFile: 'doc',
+        editFile: 'copyCode'
+    }
+
   render() {
     return (
         <div id={'app'}>
