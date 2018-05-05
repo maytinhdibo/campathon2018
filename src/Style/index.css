@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.header {
+  height: 350px;
+  background-image: url("/img/startbg.png");
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 2px 2px #345;
+}
+
+.header-text {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.header-text p {
+  line-height: 150%;
+}
+
+.header span {
+  font-size: 45px;
+}
+
+.start-button {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 350px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  transition: 0.5s;
+  background: #136a8a;
+  color: #fff;
+  padding: 15px 30px;
+}
+
+.start-button:hover {
+  background: #fff;
+  color: #345;
+}
+
+button {
+  padding: 15px;
+  background: #fff;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.list-learn {
+  columns: 2;
+  position: fixed;
+  top: 350px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  padding: 6px 40px;
+  padding-top: 35px;
+  background: linear-gradient(to right, #136a8a, #3eb8ae);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.list-learn a {
+  color: #345;
+  text-decoration: none;
+}
+
+.list-learn li {
+  list-style-type: none;
+  box-sizing: border-box;
+  column-gap: 75px;
+  background: #fff;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 9px;
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+  border: solid 1px #ddd;
+  cursor: pointer;
+}
+.list-learn li:hover .number-list{
+  background: #3eb8ae;
+  transform: rotate(360deg);
+}
+.number-list {
+  display: inline-block;
+  background: #FF4666;
+  padding: 6px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  color: center;
+  border-radius: 100%;
+  color: #fff;
+  margin-right: 20px;
+  transition: 0.5s;
+}
