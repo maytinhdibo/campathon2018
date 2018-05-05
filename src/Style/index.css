@@ -111,11 +111,13 @@ button {
 .nav{
   background:#eee;
   position:fixed;
+  z-index: 1000;
   top:0;
   bottom:0;
-  left:0;
+  left:-1000px;
   width:300px;
   overflow:auto;
+  transition: 1s;
 }
 .topic{
   padding:6px;

@@ -18,7 +18,7 @@ class NavBar extends  React.Component {
             );
         });
         return(
-            <div id = 'navbar-hidden'>
+            <div id = 'navbar'>
                 <div className="nav">
                     <div className="back" onClick={this.hiddenNavbar}>&lsaquo;</div>
                     {listTopic}
@@ -27,6 +27,9 @@ class NavBar extends  React.Component {
         );
     }
 
+    hiddenNavbar = () =>{
+        document.getElementsByClassName('nav')[0].style.left = '-1000px';
+    }
 }
 
 export default NavBar;

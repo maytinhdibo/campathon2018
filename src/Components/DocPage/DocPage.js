@@ -14,9 +14,6 @@ class DocPage extends React.Component {
         )
     }
 
-    hiddenNavbar = ()=>{
-
-    }
 }
 
 export default DocPage;
