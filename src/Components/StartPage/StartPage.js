@@ -17,7 +17,7 @@ class StartPage extends React.Component {
                         </div>
                     </Animated>
                     <Animated animationIn="fadeInUp" isVisible={true}>
-                        <Link  to = '/doc' className={'start-button'}>BẮT ĐẦU</Link>
+                        <Link  to = '/doc/1' className={'start-button'}>BẮT ĐẦU</Link>
                     </Animated>
                 </div>
 
