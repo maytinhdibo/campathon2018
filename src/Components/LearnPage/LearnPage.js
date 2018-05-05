@@ -16,7 +16,9 @@ class LearnPage extends React.Component {
     }
     componentDidMount() {
         const self = this;
-        fetch('http://localhost:8080/output?file=1/code.js')
+        const id=self.props.match.params.id;
+        console.log(id);
+        fetch('http://localhost:8080/output?file='+id+'/code.js&read=false')
             .then(function (response) {
                 response.text().then(function (text) {
                     self.state.code = text;
@@ -56,6 +58,7 @@ class LearnPage extends React.Component {
                 <NavBar data={this.props.data}/>
                 <div id="toolkit">
                     <button onClick={this.download}>Lưu file</button>
+                    <button onClick={this.download}>Tải lại</button>
                     <button onClick={this.run}>Chạy ngay »</button>
                     <button id="nextButton">Bài tiếp</button>
                 </div>
