@@ -1,0 +1,102 @@
+<div id="console">
+  <div id="console-content">
+    Terminal was starting....
+  </div>
+  <form class="cmd">
+    <span class="cmdicon">></span>
+    <input onchange={this.change} id="input" value="" />
+  </form>
+</div>
+
+<script>
+  document.addEventListener("click",function(){
+    document.querySelector("#input").click();
+  });
+  function consoleLog(text) {
+    document.getElementById("console-content").innerHTML += "<p>" + text;
+  }
+  document.getElementsByClassName("cmd")[0].addEventListener("submit", function (e) {
+    e.preventDefault();
+    consoleLog(document.querySelector("#input").value);
+    try {
+      eval(document.querySelector("#input").value);
+    } catch (err) {
+      consoleLog("" + err);
+    }
+    document.querySelector("#input").value="";
+    document.getElementById("console-content").scrollTop=document.getElementById("console-content").scrollHeight;
+  });
+  (function(){
+    var oldLog = console.log;
+    console.log = function (message) {
+        // DO MESSAGE HERE.
+        consoleLog(message);
+        oldLog.apply(console, arguments);
+    };
+})();
+
+</script>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    outline:none;
+  }
+
+  #console {
+    box-sizing: border-box;
+    background: #273238;
+    color: #399e96;
+    padding: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    height: 150px;
+  }
+
+  @keyframes animate {
+    from {
+      color: #273238;
+    }
+
+    to {
+      width: #399e96;
+    }
+  }
+
+  #console {
+    position: relative;
+  }
+
+  #console-content {
+    overflow: auto;
+    height: 85%;
+  }
+
+  .cmd {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .cmd * {
+    padding: 4px;
+  }
+
+  .cmd input {
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    width: 700px;
+  }
+
+  .cmdicon {
+    animation-duration: 0.5s;
+    animation-name: animate;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+</style>

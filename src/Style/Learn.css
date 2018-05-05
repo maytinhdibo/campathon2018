@@ -47,5 +47,42 @@ iframe{
     width: 100%;
     text-align: left;
     font-weight: 600;
-    width:200px;
+    height:150px;
 }
+@keyframes animate {
+    from {
+      color: #273238;
+    }
+  
+    to {
+      width: #399e96;
+    }
+  }
+  #console{
+      position: relative;
+  }
+  #console-content{
+    overflow: auto;
+    height: 85%;
+  }
+  .cmd{
+      position: absolute;
+      bottom:0;
+      left:0;
+  }
+  .cmd *{
+    padding:4px;
+  }
+  .cmd input{
+      border:none;
+      background:none;
+      color:inherit;
+      font:inherit;
+      width:700px;
+  }
+  .cmdicon {
+    animation-duration: 0.5s;
+    animation-name: animate;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
