@@ -1,4 +1,5 @@
 import React from "react";
+import TestClass from "./TestApp";
 import {Switch, Route} from "react-router-dom";
 
 class Test  extends React.Component {
@@ -8,6 +9,7 @@ class Test  extends React.Component {
             <div className="browser">
             dsfdsfdf
             <input/>
+            <TestClass/>
             </div>
               
             </div>
