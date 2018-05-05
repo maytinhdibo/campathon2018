@@ -9,9 +9,7 @@ class Test  extends React.Component {
             dsfdsfdf
             <input/>
             </div>
-                <Switch>
-                    <Route exact path={"/test/:id"} component={Test}/>
-                </Switch>
+              
             </div>
         )
     }
