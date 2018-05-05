@@ -1726,11 +1726,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-<<<<<<< HEAD
-create-react-class@^15.6.0:
-=======
 create-react-class@^15.5.1, create-react-class@^15.6.0:
->>>>>>> 3eb1e954cac2b967ddbcdb6052b1889e3574c2ca
   version "15.6.3"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
   dependencies:
@@ -5594,11 +5590,10 @@ react-animated-css@^1.0.4:
     prop-types "^15.5.10"
     react "^15.6.1"
 
-<<<<<<< HEAD
 react-code-mirror@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-code-mirror/-/react-code-mirror-3.1.0.tgz#d1e34a417dc9555dddbd63528f9fa6370d46fc44"
-=======
+
 react-codemirror@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-codemirror/-/react-codemirror-1.0.0.tgz#91467b53b1f5d80d916a2fd0b4c7adb85a9001ba"
@@ -5609,7 +5604,6 @@ react-codemirror@^1.0.0:
     lodash.debounce "^4.0.8"
     lodash.isequal "^4.5.0"
     prop-types "^15.5.4"
->>>>>>> 3eb1e954cac2b967ddbcdb6052b1889e3574c2ca
 
 react-dev-utils@^5.0.1:
   version "5.0.1"

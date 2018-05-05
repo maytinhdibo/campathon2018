@@ -5,11 +5,8 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-animated-css": "^1.0.4",
-<<<<<<< HEAD
     "react-code-mirror": "^3.1.0",
-=======
     "react-codemirror": "^1.0.0",
->>>>>>> 3eb1e954cac2b967ddbcdb6052b1889e3574c2ca
     "react-dom": "^16.3.2",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4"
