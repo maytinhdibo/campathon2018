@@ -17,12 +17,12 @@ class StartPage extends React.Component {
                         </div>
                     </Animated>
                     <Animated animationIn="fadeInUp" isVisible={true}>
-                        <button className={'start-button'}>BẮT ĐẦU</button>
+                        <Link  to = '/doc' className={'start-button'}>BẮT ĐẦU</Link>
                     </Animated>
                 </div>
 
                 <ul className={'list-learn'}>
-                   <Link to="learn/batdau"> <li><span className={'number-list'}>1</span> Bắt đầu với JSX</li></Link>
+                    <li><span className={'number-list'}>1</span> Bắt đầu với JSX</li>
                     <li><span className={'number-list'}>2</span> Class và Component</li>
                     <li><span className={'number-list'}>3</span> Props và State</li>
                     <li><span className={'number-list'}>4</span> Vòng đời trong ReactJS</li>
