@@ -3,9 +3,7 @@ import '../Style/App.css';
 import {Switch, Route} from "react-router-dom";
 import StartPage from "./StartPage/StartPage";
 import LearnPage from "./LearnPage/LearnPage";
-import Header from "./Header";
 import DocPage from "./DocPage/DocPage";
-import NavBar from "./Navbar";
 import Test from "./Test/Test";
 
 
