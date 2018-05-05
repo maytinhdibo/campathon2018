@@ -26,7 +26,7 @@ class LearnPage extends React.Component {
                 <iframe src="http://www.december.com/html/tutor/hello.html"/>
                 </div>
                     <div id="console">
-                    testing
+                    Terminal was starting....
                     </div>
             </div>
             </div>
