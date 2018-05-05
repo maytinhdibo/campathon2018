@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./../Header";
 import Navbar from "./../Navbar";
-const ReactMarkdown = require('react-markdown')
 
 class DocPage extends React.Component {
     constructor(props){
@@ -37,22 +36,10 @@ class DocPage extends React.Component {
             })
     }
     render(){
-        const input = `
-        ## Tables?
-
-        | Feature | Support |
-        | ------ | ----------- |
-        | tables | ✔ |
-        | alignment | ✔ |
-        | wewt | ✔ |
-        
-        ## More info?
-        `;
         return(
             <div>
                 <Header/>
                 <Navbar data={this.props.data} />
-                <ReactMarkdown escapeHtml={true} source={this.state.text} />
                 <div id='doc-content'></div>
             </div>
         )
