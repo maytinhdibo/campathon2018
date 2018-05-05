@@ -1,13 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 * {
   outline: none;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .header {

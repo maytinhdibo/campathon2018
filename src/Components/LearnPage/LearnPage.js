@@ -1,25 +1,36 @@
 import React from "react";
+import CodeMirror from 'react-codemirror';
+import '../../Style/Learn.css';
+require('codemirror/lib/codemirror.css');
+require('codemirror/mode/javascript/javascript');
+require('codemirror/theme/material.css');
 
-class LearnPage extends React.Component{
-    render(){
-        return(
+class LearnPage extends React.Component {
+    render() {
+        return (
             <div>
-                <div >
-                    <ul className={'learn-time-line'}>
-                        <li className={'lesson'}>
-                            Bài 1:
-                            <span className={'doc'}>Học:</span>
-                            <span className={'code-live'}>Thực hành:</span>
-                            <p className={'doc-text'}></p>
-                        </li>
-                    </ul>
+                <div id="toolkit">
+                <button>Lưu file</button>
+                <button>Chạy ngay »</button>
                 </div>
-                <div className={'code'}>
-                    <span className={'run-code'}>Chạy thử nào!</span>
+            <div className="main-learn">
+                <div id="code">
+                    <CodeMirror options={{
+                        mode: 'javascript',
+                        lineNumbers: true,
+                        theme: 'material'
+                    }} />
                 </div>
-                <div className={'build-code'}></div>
+
+                <div id="frame">
+                <iframe src="http://www.december.com/html/tutor/hello.html"/>
+                </div>
+                    <div id="console">
+                    testing
+                    </div>
+            </div>
             </div>
         )
     }
 }
-export  default LearnPage;
+export default LearnPage;
