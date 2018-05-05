@@ -6,29 +6,36 @@ require('codemirror/mode/javascript/javascript');
 require('codemirror/theme/material.css');
 
 class LearnPage extends React.Component {
+    state = {
+        console: ["Terminal was starting...."],
+        input: ""
+    }
     render() {
+        const console = this.state.console.map((text) =>
+            <p>{text}</p>
+        );
         return (
             <div>
                 <div id="toolkit">
-                <button>Lưu file</button>
-                <button>Chạy ngay »</button>
+                    <button>Lưu file</button>
+                    <button>Chạy ngay »</button>
                 </div>
-            <div className="main-learn">
-                <div id="code">
-                    <CodeMirror options={{
-                        mode: 'javascript',
-                        lineNumbers: true,
-                        theme: 'material'
-                    }} />
-                </div>
-
-                <div id="frame">
-                <iframe src="http://www.december.com/html/tutor/hello.html"/>
-                </div>
-                    <div id="console">
-                    Terminal was starting....
+                <div className="main-learn">
+                    <div id="code">
+                        <CodeMirror options={{
+                            mode: 'javascript',
+                            lineNumbers: true,
+                            theme: 'material'
+                        }} />
                     </div>
-            </div>
+
+                    <div id="frame">
+                        <iframe src="http://www.december.com/html/tutor/hello.html" />
+                    </div>
+<iframe src="/console.html">
+    </iframe>
+                    
+                </div>
             </div>
         )
     }
