@@ -27,6 +27,18 @@ class LearnPage extends React.Component {
                     });
                 });
             });
+
+
+        fetch('http://localhost:8080/output?file=' + id + '/guild.html&&read=true')
+            .then(function (response) {
+                response.text().then(function (text) {
+                    console.log(self.state.guild);
+                    document.getElementById('guild').innerHTML = text;
+                });
+            });
+
+
+        document.getElementsByClassName('nav')[0].style.left = '-1000px';
     }
     componentDidMount() {
         this.fech();
@@ -73,8 +85,8 @@ class LearnPage extends React.Component {
                     <button id="nextButton">Bài tiếp</button>
                 </div>
                 <div className="main-learn">
-                    <div id="code">
                         <div id='guild'/>
+                        <div id="code">
                         <CodeMirror value={this.state.code} options={{
                             mode: 'javascript',
                             lineNumbers: true,

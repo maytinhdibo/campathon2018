@@ -146,3 +146,11 @@ button {
   color:#eee;
   cursor: pointer;
 }
+#guild{
+padding:6px;
+width:100%;
+text-align: left;
+background:#fafafa;
+box-sizing: border-box;
+border-left:2px solid #999;
+}

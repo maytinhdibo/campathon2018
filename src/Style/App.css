@@ -52,7 +52,7 @@ footer{
   vertical-align: middle;
   margin-right:10px;
   padding:3px;
-  background:#ccc;
+  background: #72be8f;
   cursor:pointer;
 }
 #doc-content{
@@ -70,8 +70,8 @@ footer{
 #try-it{
   text-decoration-line: none;
   text-align: center;
-  width: 80px;
-  height:80px;
+  width: 50px;
+  height:50px;
   display: inline-block;
   border-radius: 50%;
   overflow:hidden;
@@ -79,12 +79,19 @@ footer{
   position: fixed;
   right: 20px;
   bottom: 20px;
-
-  box-shadow: 0 0 3px gray;
+  transform:translate(-50%,-50%);
+  box-sizing: border-box;
+  box-shadow: 0 0 4px rgb(82, 81, 81);
   transition: 0.3s;
+  border:0px solid #cfdcec93;
+  font-size: 25px;
+    line-height: 200%;
+    color:#fff;
 }
 
 #try-it:hover{
+  font-size: 25px;
+  line-height: 130%;
   background:#30588e;
-  border:10px solid #cfdcec;
+  border:8px solid #cfdcec;
 }
