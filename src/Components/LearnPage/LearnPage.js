@@ -27,7 +27,7 @@ class LearnPage extends React.Component {
                     });
                 });
             });
-            document.getElementsByClassName('nav')[0].style.left = '-1000px';
+            document.getElementsByClassName('nav')[0].style.left = '-1000px';   
     }
     componentDidMount() {
         this.fech();
