@@ -10,7 +10,8 @@
 
 <script>
   document.addEventListener("click",function(){
-    document.querySelector("#input").click();
+    document.querySelector("#input").focus();
+    return false;
   });
   function consoleLog(text) {
     if((typeof text)=="string"){
@@ -34,7 +35,7 @@
     var oldLog = console.log;
     console.log = function (message) {
         // DO MESSAGE HERE.
-        consoleLog(messageJSON.stringify(a));
+        consoleLog(message);
         oldLog.apply(console, arguments);
     };
 })();
@@ -47,7 +48,9 @@
     margin: 0;
     outline:none;
   }
-
+body{
+  overflow: hidden;
+}
   #console {
     box-sizing: border-box;
     background: #273238;

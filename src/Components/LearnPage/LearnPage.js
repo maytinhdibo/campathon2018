@@ -57,6 +57,9 @@ class LearnPage extends React.Component {
         anchor.dataset.downloadurl = ['text/plain', anchor.download, anchor.href].join(':');
         anchor.click();
     }
+    reload=()=>{
+        window.location.reload();
+    }
     run = () => {
         const request = new Request("http://localhost:8080/input", {
             method: "POST",
@@ -71,6 +74,7 @@ class LearnPage extends React.Component {
         return fetch(request)
             .then(response => {
                 console.log(response);
+                document.getElementById("console").contentWindow.consoleLog("Test is starting...");
             });
     }
     render() {
@@ -80,7 +84,7 @@ class LearnPage extends React.Component {
                 <NavBar data={this.props.data} />
                 <div id="toolkit">
                     <button onClick={this.download}>Lưu file</button>
-                    <button onClick={this.download}>Tải lại</button>
+                    <button onClick={this.reload}>Tải lại</button>
                     <button onClick={this.run}>Chạy ngay »</button>
                     <button id="nextButton">Bài tiếp</button>
                 </div>
