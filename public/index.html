@@ -46,7 +46,6 @@
             }
         }
         bindEvent(window, 'message', function (e) {
-          document.querySelector("#console").contentWindow.consoleLog(e.data);
            try{
              document.querySelector("#console").consoleLog(e.data);
            }catch{

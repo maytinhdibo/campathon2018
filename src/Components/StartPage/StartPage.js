@@ -6,8 +6,7 @@ class StartPage extends React.Component {
 
     render() {
         const listLearn = this.props.data.name.map((name , index)=>{
-            console.log(name);
-            return  <li><Link to={'doc/'+(index+1).toString()}><span className={'number-list'}>{(index+1).toString()}</span></Link>{name}</li>
+            return  <li key={index}><Link  to={'doc/'+(index+1).toString()}><span className={'number-list'}>{(index+1).toString()}</span></Link>{name}</li>
         });
 
         return (
@@ -17,7 +16,7 @@ class StartPage extends React.Component {
                         <div className={'header-text'}>
                             <span>REACT LEARN LIVE</span>
                             <p>Trang web đào tạo ReactJs<br />
-                                <i>Một sản phẩm của team MTC UET Campathon2018</i>
+                                <i>Một sản phẩm của team Mtc UET Campathon 2018</i>
                             </p>
                         </div>
                     </Animated>

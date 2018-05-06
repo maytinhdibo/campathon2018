@@ -1,16 +1,10 @@
 import React from "react";
 import Header from "./../Header";
 import Navbar from "./../Navbar";
-import {Link, Redirect} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 class DocPage extends React.Component {
-    constructor(props){
-        super(props);
-        this.state={
-            text:"test"
-        };
-        this.setState(this.state);
-    }
+
     componentDidMount(){
         const self = this;
         const  id = self.props.match.params.id;

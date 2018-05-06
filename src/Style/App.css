@@ -95,3 +95,9 @@ footer{
   background:#30588e;
   border:8px solid #cfdcec;
 }
+
+.header-name{
+  cursor:pointer;
+  text-decoration-line: none;
+  color: #334455;
+}
