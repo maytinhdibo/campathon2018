@@ -4,8 +4,6 @@ import {Switch, Route} from "react-router-dom";
 import StartPage from "./StartPage/StartPage";
 import LearnPage from "./LearnPage/LearnPage";
 import DocPage from "./DocPage/DocPage";
-import Test from "./Test/Test";
-
 
 class App extends Component {
     state = {
@@ -33,8 +31,7 @@ class App extends Component {
             <Switch>
                 <Route exact path={"/"} render={(props)=><StartPage {...props} data={this.state}/> }/>
                 <Route exact path={'/doc/:id'} render = {(props)=><DocPage {...props} data={this.state}/>}/>
-                <Route exact path={'/doc/:id/learn/'} render = {(props)=><LearnPage {...props} data={this.state} />}/>
-                <Route exact path={"/test"} component={Test}/>
+                <Route exact path={'/doc/:id/learn/'} render = {(props)=><LearnPage {...props} data={this.state}/>}/>
             </Switch>
         </div>
           );

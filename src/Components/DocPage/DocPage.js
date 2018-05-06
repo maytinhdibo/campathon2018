@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./../Header";
 import Navbar from "./../Navbar";
-import {Link, Redirect} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 class DocPage extends React.Component {
     constructor(props){
@@ -39,7 +39,7 @@ class DocPage extends React.Component {
                 <Header/>
                 <Navbar data={this.props.data} />
                 <div id='doc-content'/>
-                <Link to={'/doc/'+_id.toString()+'/learn/'} id="try-it"> &#9755;</Link>
+                <Link to={'/doc/'+_id.toString()+'/learn/'} id="try-it"> &#9654;</Link>
             </div>
         )
     }
