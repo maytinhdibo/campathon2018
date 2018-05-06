@@ -3,6 +3,7 @@ import { UnControlled as CodeMirror } from 'react-codemirror2'
 import '../../Style/Learn.css';
 import Header from "./../Header";
 import NavBar from "../Navbar";
+import {Link} from "react-router-dom";
 require('codemirror/lib/codemirror.css');
 require('codemirror/mode/javascript/javascript');
 require('codemirror/theme/material.css');
@@ -72,6 +73,7 @@ class LearnPage extends React.Component {
             });
     }
     render() {
+        const id = this.props.match.params.id;
         return (
             <div>
                 <Header />
@@ -80,7 +82,7 @@ class LearnPage extends React.Component {
                     <button onClick={this.download}>Lưu file</button>
                     <button onClick={this.download}>Tải lại</button>
                     <button onClick={this.run}>Chạy ngay »</button>
-                    <button id="nextButton">Bài tiếp</button>
+                    <Link to={'/doc/'+(id-(-1)).toString()} ><button id="nextButton">Bài tiếp</button></Link>
                 </div>
                 <div className="main-learn">
                         <div id='guild'/>
@@ -95,9 +97,9 @@ class LearnPage extends React.Component {
                     </div>
 
                     <div id="frame">
-                        <iframe src="http://localhost:3001/" />
+                        <iframe src="http://localhost:3001/" title={"live-code"}/>
                     </div>
-                    <iframe id="console" src="/console.html">
+                    <iframe id="console" src="/console.html" title={"live-code"}>
                     </iframe>
 
                 </div>
