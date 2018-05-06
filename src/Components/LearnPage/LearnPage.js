@@ -12,7 +12,7 @@ class LearnPage extends React.Component {
         console: ["Terminal was starting...."],
         input: "",
         code: 'Loading...',
-        codeContent: ''
+        codeContent: '',
     }
     fech = () => {
         const self = this;
@@ -27,7 +27,6 @@ class LearnPage extends React.Component {
                     });
                 });
             });
-            document.getElementsByClassName('nav')[0].style.left = '-1000px';   
     }
     componentDidMount() {
         this.fech();
@@ -75,6 +74,7 @@ class LearnPage extends React.Component {
                 </div>
                 <div className="main-learn">
                     <div id="code">
+                        <div id='guild'/>
                         <CodeMirror value={this.state.code} options={{
                             mode: 'javascript',
                             lineNumbers: true,

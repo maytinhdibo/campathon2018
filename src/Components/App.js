@@ -31,7 +31,7 @@ class App extends Component {
     return (
         <div id={'app'}>
             <Switch>
-                <Route exact path={"/"} component={StartPage}/>
+                <Route exact path={"/"} render={(props)=><StartPage {...props} data={this.state}/> }/>
                 <Route exact path={'/doc/:id'} render = {(props)=><DocPage {...props} data={this.state}/>}/>
                 <Route exact path={'/doc/:id/learn/'} render = {(props)=><LearnPage {...props} data={this.state} />}/>
                 <Route exact path={"/test"} component={Test}/>

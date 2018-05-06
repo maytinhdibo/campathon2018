@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./../Header";
 import Navbar from "./../Navbar";
+import {Link, Redirect} from "react-router-dom";
 
 class DocPage extends React.Component {
     constructor(props){
@@ -32,11 +33,13 @@ class DocPage extends React.Component {
             })
     }
     render(){
+        const  _id = this.props.match.params.id;
         return(
             <div>
                 <Header/>
                 <Navbar data={this.props.data} />
-                <div id='doc-content'></div>
+                <div id='doc-content'/>
+                <Link to={'/doc/'+_id.toString()+'/learn/'} id="try-it"> &#9755;</Link>
             </div>
         )
     }
