@@ -66,3 +66,25 @@ footer{
   background-color:#ccc;
   font-size:16px;
 }
+
+#try-it{
+  text-decoration-line: none;
+  text-align: center;
+  width: 80px;
+  height:80px;
+  display: inline-block;
+  border-radius: 50%;
+  overflow:hidden;
+  background: #4679BD;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  box-shadow: 0 0 3px gray;
+  transition: 0.3s;
+}
+
+#try-it:hover{
+  background:#30588e;
+  border:10px solid #cfdcec;
+}

@@ -39,7 +39,7 @@ class DocPage extends React.Component {
                 <Header/>
                 <Navbar data={this.props.data} />
                 <div id='doc-content'/>
-                <Link to={'/doc/'+_id.toString()+'/learn/'}>Thử nào!</Link>
+                <Link to={'/doc/'+_id.toString()+'/learn/'} id="try-it"> &#9755;</Link>
             </div>
         )
     }
